@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		171BDB6822856D9C0069EC49 /* SecondMeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171BDB6722856D9C0069EC49 /* SecondMeasureViewController.swift */; };
+		179762022269D5C3009A3927 /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179762012269D5C3009A3927 /* MeasureViewController.swift */; };
+		17A61D10226B35F1009FA35B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A61D0F226B35F1009FA35B /* ResultsViewController.swift */; };
+		17AC3D332266EC0F00989403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC3D322266EC0F00989403 /* AppDelegate.swift */; };
+		17AC3D352266EC0F00989403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC3D342266EC0F00989403 /* ViewController.swift */; };
+		17AC3D382266EC0F00989403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AC3D362266EC0F00989403 /* Main.storyboard */; };
+		17AC3D3A2266EC1200989403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17AC3D392266EC1200989403 /* Assets.xcassets */; };
+		17AC3D3D2266EC1200989403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AC3D3B2266EC1200989403 /* LaunchScreen.storyboard */; };
+		17AC3D482266EC1200989403 /* VolumoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC3D472266EC1200989403 /* VolumoTests.swift */; };
+		17AC3D532266EC1200989403 /* VolumoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC3D522266EC1200989403 /* VolumoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17AC3D442266EC1200989403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17AC3D272266EC0F00989403 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17AC3D2E2266EC0F00989403;
+			remoteInfo = Volumo;
+		};
+		17AC3D4F2266EC1200989403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17AC3D272266EC0F00989403 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17AC3D2E2266EC0F00989403;
+			remoteInfo = Volumo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		171BDB6722856D9C0069EC49 /* SecondMeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMeasureViewController.swift; sourceTree = "<group>"; };
+		179762012269D5C3009A3927 /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
+		17A61D0F226B35F1009FA35B /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		17AC3D2F2266EC0F00989403 /* Volumo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volumo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17AC3D322266EC0F00989403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17AC3D342266EC0F00989403 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17AC3D372266EC0F00989403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17AC3D392266EC1200989403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17AC3D3C2266EC1200989403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17AC3D3E2266EC1200989403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17AC3D432266EC1200989403 /* VolumoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolumoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17AC3D472266EC1200989403 /* VolumoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumoTests.swift; sourceTree = "<group>"; };
+		17AC3D492266EC1200989403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17AC3D4E2266EC1200989403 /* VolumoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolumoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17AC3D522266EC1200989403 /* VolumoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumoUITests.swift; sourceTree = "<group>"; };
+		17AC3D542266EC1200989403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17AC3D2C2266EC0F00989403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17AC3D402266EC1200989403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17AC3D4B2266EC1200989403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17AC3D262266EC0F00989403 = {
+			isa = PBXGroup;
+			children = (
+				17AC3D312266EC0F00989403 /* Volumo */,
+				17AC3D462266EC1200989403 /* VolumoTests */,
+				17AC3D512266EC1200989403 /* VolumoUITests */,
+				17AC3D302266EC0F00989403 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17AC3D302266EC0F00989403 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17AC3D2F2266EC0F00989403 /* Volumo.app */,
+				17AC3D432266EC1200989403 /* VolumoTests.xctest */,
+				17AC3D4E2266EC1200989403 /* VolumoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17AC3D312266EC0F00989403 /* Volumo */ = {
+			isa = PBXGroup;
+			children = (
+				17AC3D322266EC0F00989403 /* AppDelegate.swift */,
+				17AC3D342266EC0F00989403 /* ViewController.swift */,
+				179762012269D5C3009A3927 /* MeasureViewController.swift */,
+				171BDB6722856D9C0069EC49 /* SecondMeasureViewController.swift */,
+				17A61D0F226B35F1009FA35B /* ResultsViewController.swift */,
+				17AC3D362266EC0F00989403 /* Main.storyboard */,
+				17AC3D392266EC1200989403 /* Assets.xcassets */,
+				17AC3D3B2266EC1200989403 /* LaunchScreen.storyboard */,
+				17AC3D3E2266EC1200989403 /* Info.plist */,
+			);
+			path = Volumo;
+			sourceTree = "<group>";
+		};
+		17AC3D462266EC1200989403 /* VolumoTests */ = {
+			isa = PBXGroup;
+			children = (
+				17AC3D472266EC1200989403 /* VolumoTests.swift */,
+				17AC3D492266EC1200989403 /* Info.plist */,
+			);
+			path = VolumoTests;
+			sourceTree = "<group>";
+		};
+		17AC3D512266EC1200989403 /* VolumoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17AC3D522266EC1200989403 /* VolumoUITests.swift */,
+				17AC3D542266EC1200989403 /* Info.plist */,
+			);
+			path = VolumoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17AC3D2E2266EC0F00989403 /* Volumo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17AC3D572266EC1200989403 /* Build configuration list for PBXNativeTarget "Volumo" */;
+			buildPhases = (
+				17AC3D2B2266EC0F00989403 /* Sources */,
+				17AC3D2C2266EC0F00989403 /* Frameworks */,
+				17AC3D2D2266EC0F00989403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Volumo;
+			productName = Volumo;
+			productReference = 17AC3D2F2266EC0F00989403 /* Volumo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17AC3D422266EC1200989403 /* VolumoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17AC3D5A2266EC1200989403 /* Build configuration list for PBXNativeTarget "VolumoTests" */;
+			buildPhases = (
+				17AC3D3F2266EC1200989403 /* Sources */,
+				17AC3D402266EC1200989403 /* Frameworks */,
+				17AC3D412266EC1200989403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17AC3D452266EC1200989403 /* PBXTargetDependency */,
+			);
+			name = VolumoTests;
+			productName = VolumoTests;
+			productReference = 17AC3D432266EC1200989403 /* VolumoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17AC3D4D2266EC1200989403 /* VolumoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17AC3D5D2266EC1200989403 /* Build configuration list for PBXNativeTarget "VolumoUITests" */;
+			buildPhases = (
+				17AC3D4A2266EC1200989403 /* Sources */,
+				17AC3D4B2266EC1200989403 /* Frameworks */,
+				17AC3D4C2266EC1200989403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17AC3D502266EC1200989403 /* PBXTargetDependency */,
+			);
+			name = VolumoUITests;
+			productName = VolumoUITests;
+			productReference = 17AC3D4E2266EC1200989403 /* VolumoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17AC3D272266EC0F00989403 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Ashwin Sajiv Purushothama Babu";
+				TargetAttributes = {
+					17AC3D2E2266EC0F00989403 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					17AC3D422266EC1200989403 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 17AC3D2E2266EC0F00989403;
+					};
+					17AC3D4D2266EC1200989403 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 17AC3D2E2266EC0F00989403;
+					};
+				};
+			};
+			buildConfigurationList = 17AC3D2A2266EC0F00989403 /* Build configuration list for PBXProject "Volumo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17AC3D262266EC0F00989403;
+			productRefGroup = 17AC3D302266EC0F00989403 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17AC3D2E2266EC0F00989403 /* Volumo */,
+				17AC3D422266EC1200989403 /* VolumoTests */,
+				17AC3D4D2266EC1200989403 /* VolumoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17AC3D2D2266EC0F00989403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AC3D3D2266EC1200989403 /* LaunchScreen.storyboard in Resources */,
+				17AC3D3A2266EC1200989403 /* Assets.xcassets in Resources */,
+				17AC3D382266EC0F00989403 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17AC3D412266EC1200989403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17AC3D4C2266EC1200989403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17AC3D2B2266EC0F00989403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179762022269D5C3009A3927 /* MeasureViewController.swift in Sources */,
+				17AC3D352266EC0F00989403 /* ViewController.swift in Sources */,
+				17AC3D332266EC0F00989403 /* AppDelegate.swift in Sources */,
+				171BDB6822856D9C0069EC49 /* SecondMeasureViewController.swift in Sources */,
+				17A61D10226B35F1009FA35B /* ResultsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17AC3D3F2266EC1200989403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AC3D482266EC1200989403 /* VolumoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17AC3D4A2266EC1200989403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AC3D532266EC1200989403 /* VolumoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17AC3D452266EC1200989403 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17AC3D2E2266EC0F00989403 /* Volumo */;
+			targetProxy = 17AC3D442266EC1200989403 /* PBXContainerItemProxy */;
+		};
+		17AC3D502266EC1200989403 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17AC3D2E2266EC0F00989403 /* Volumo */;
+			targetProxy = 17AC3D4F2266EC1200989403 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17AC3D362266EC0F00989403 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17AC3D372266EC0F00989403 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17AC3D3B2266EC1200989403 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17AC3D3C2266EC1200989403 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17AC3D552266EC1200989403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17AC3D562266EC1200989403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17AC3D582266EC1200989403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4L35Q2J2X7;
+				INFOPLIST_FILE = Volumo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sd.Volumo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17AC3D592266EC1200989403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4L35Q2J2X7;
+				INFOPLIST_FILE = Volumo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sd.Volumo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17AC3D5B2266EC1200989403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VolumoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sd.VolumoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Volumo.app/Volumo";
+			};
+			name = Debug;
+		};
+		17AC3D5C2266EC1200989403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VolumoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sd.VolumoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Volumo.app/Volumo";
+			};
+			name = Release;
+		};
+		17AC3D5E2266EC1200989403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VolumoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sd.VolumoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Volumo;
+			};
+			name = Debug;
+		};
+		17AC3D5F2266EC1200989403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VolumoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sd.VolumoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Volumo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17AC3D2A2266EC0F00989403 /* Build configuration list for PBXProject "Volumo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17AC3D552266EC1200989403 /* Debug */,
+				17AC3D562266EC1200989403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17AC3D572266EC1200989403 /* Build configuration list for PBXNativeTarget "Volumo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17AC3D582266EC1200989403 /* Debug */,
+				17AC3D592266EC1200989403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17AC3D5A2266EC1200989403 /* Build configuration list for PBXNativeTarget "VolumoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17AC3D5B2266EC1200989403 /* Debug */,
+				17AC3D5C2266EC1200989403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17AC3D5D2266EC1200989403 /* Build configuration list for PBXNativeTarget "VolumoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17AC3D5E2266EC1200989403 /* Debug */,
+				17AC3D5F2266EC1200989403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17AC3D272266EC0F00989403 /* Project object */;
+}
