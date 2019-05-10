@@ -20,8 +20,25 @@ class MeasureViewController: UIViewController {
     
     
     @IBAction func Measure(_ sender: UIButton) {
+        if !(tempText == "sphere" || tempText == "cube"){
         performSegue(withIdentifier: "measureToMeasure", sender: self)
+        }
+        else {
+            performSegue(withIdentifier: "measure1ToResults", sender: self)
+        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "measureToMeasure"){
+            let vc = segue.destination as! SecondMeasureViewController
+            vc.tempText = self.tempText
+        }
+        else if (segue.identifier == "measure1ToResults"){
+            let vc = segue.destination as! ResultsViewController
+            vc.tempText = self.tempText
+        }
+    }
+    
     
     /*
     // MARK: - Navigation

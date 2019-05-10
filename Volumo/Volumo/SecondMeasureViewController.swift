@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondMeasureViewController: UIViewController {
-
+    var tempText = ""
     @IBAction func measureNext(_ sender: UIButton) {
         performSegue(withIdentifier: "measure2ToResults", sender: self)
     }
@@ -18,8 +18,10 @@ class SecondMeasureViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ResultsViewController
+        vc.tempText = tempText
+    }
     /*
     // MARK: - Navigation
 

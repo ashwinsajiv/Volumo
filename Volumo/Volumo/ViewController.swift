@@ -43,14 +43,13 @@ class ViewController: UIViewController {
         default:
             print ("")
         }
-            performSegue(withIdentifier: "mainToMeasure", sender: self)
+        performSegue(withIdentifier: "mainToMeasure", sender: self)
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "mainToMeasure"){
             let vc = segue.destination as! MeasureViewController
             vc.tempText = passingInfo
-        }
     }
     @IBAction func handleSelection(_ sender: UIButton) {
         cityButtons.forEach{(button) in

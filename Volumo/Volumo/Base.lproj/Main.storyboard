@@ -213,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kr-DK-fm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="33"/>
+            <point key="canvasLocation" x="754" y="33"/>
         </scene>
         <!--Second Measure View Controller-->
         <scene sceneID="KbJ-TO-i7P">
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sJ-3o-Xif" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="33"/>
+            <point key="canvasLocation" x="1545" y="494"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="BK8-S4-WSv">
@@ -275,7 +275,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICq-9N-kea" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TN9-bI-yJW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1087" y="-786"/>
+            <point key="canvasLocation" x="2326" y="33"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -10,16 +10,15 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     var tempText = ""
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(tempText)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func Home(_ sender: UIButton) {
     }
-    
+  
     /*
     // MARK: - Navigation
 
