@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var cityButtons: [UIButton]!
+    @IBOutlet var shapeButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,25 +21,34 @@ class ViewController: UIViewController {
     enum Shapes: String {
         case cylinder = "Cylinder"
         case cone = "Cone"
-        case pyramid = "Pyramid"
+        case hemisphere = "Hemisphere"
         case sphere = "Sphere"
         case cube = "Cube"
+        case pyramid = "Pyramid"
+        case cuboid = "Cuboid"
+        case length = "Length"
     }
-    @IBAction func cityTapped(_ sender: UIButton) {
+    @IBAction func shapeTapped(_ sender: UIButton) {
         guard let title = sender.currentTitle, let shape = Shapes(rawValue: title) else {
             return
         }
         switch shape {
         case .cylinder:
-            passingInfo = "cylinder"
+            passingInfo = "Cylinder"
         case .cone:
-            passingInfo = "cone"
-        case .pyramid:
-            passingInfo = "pyramid"
+            passingInfo = "Cone"
+        case .hemisphere:
+            passingInfo = "Hemisphere"
         case .sphere:
-            passingInfo = "sphere"
+            passingInfo = "Sphere"
         case .cube:
-            passingInfo = "cube"
+            passingInfo = "Cube"
+        case .pyramid:
+            passingInfo = "Pyramid"
+        case .cuboid:
+            passingInfo = "Cuboid"
+        case .length:
+            passingInfo = "Length"
         default:
             print ("")
         }
@@ -52,7 +61,7 @@ class ViewController: UIViewController {
             vc.tempText = passingInfo
     }
     @IBAction func handleSelection(_ sender: UIButton) {
-        cityButtons.forEach{(button) in
+        shapeButtons.forEach{(button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = !button.isHidden
                 self.view.layoutIfNeeded()
