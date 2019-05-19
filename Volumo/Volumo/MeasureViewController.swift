@@ -24,10 +24,15 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
         self.sceneView.delegate = self
-        if (tempText == "Cylinder" || tempText == "Cone" || tempText == "Cube"){
-        let alert = UIAlertController(title: "Alert", message: "Measure height", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        if (tempText == "Length"){
+            let alert = UIAlertController(title: "Alert", message: "Measure length", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else if (tempText == "Cylinder" || tempText == "Cone" || tempText == "Cube" || tempText == "Cuboid"){
+            let alert = UIAlertController(title: "Alert", message: "Measure height", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         else{
             let alert = UIAlertController(title: "Alert", message: "Measure diameter", preferredStyle: UIAlertController.Style.alert)
@@ -53,7 +58,7 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
         self.startingPosition = sphere
     }
     @IBAction func Measure(_ sender: UIButton) {
-        if !(tempText == "Sphere" || tempText == "Cube" || tempText == "Hemisphere"){
+        if !(tempText == "Sphere" || tempText == "Cube" || tempText == "Hemisphere" || tempText == "Length"){
         performSegue(withIdentifier: "measureToMeasure", sender: self)
         }
         else {

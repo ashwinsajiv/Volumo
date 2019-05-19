@@ -17,6 +17,7 @@
 		17AC3D3D2266EC1200989403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AC3D3B2266EC1200989403 /* LaunchScreen.storyboard */; };
 		17AC3D482266EC1200989403 /* VolumoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC3D472266EC1200989403 /* VolumoTests.swift */; };
 		17AC3D532266EC1200989403 /* VolumoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC3D522266EC1200989403 /* VolumoUITests.swift */; };
+		17F6BFFE2290224B00738D44 /* ThirdMeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6BFFD2290224B00738D44 /* ThirdMeasureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		17AC3D4E2266EC1200989403 /* VolumoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolumoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AC3D522266EC1200989403 /* VolumoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumoUITests.swift; sourceTree = "<group>"; };
 		17AC3D542266EC1200989403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17F6BFFD2290224B00738D44 /* ThirdMeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdMeasureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				17AC3D342266EC0F00989403 /* ViewController.swift */,
 				179762012269D5C3009A3927 /* MeasureViewController.swift */,
 				171BDB6722856D9C0069EC49 /* SecondMeasureViewController.swift */,
+				17F6BFFD2290224B00738D44 /* ThirdMeasureViewController.swift */,
 				17A61D0F226B35F1009FA35B /* ResultsViewController.swift */,
 				17AC3D362266EC0F00989403 /* Main.storyboard */,
 				17AC3D392266EC1200989403 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F6BFFE2290224B00738D44 /* ThirdMeasureViewController.swift in Sources */,
 				179762022269D5C3009A3927 /* MeasureViewController.swift in Sources */,
 				17AC3D352266EC0F00989403 /* ViewController.swift in Sources */,
 				17AC3D332266EC0F00989403 /* AppDelegate.swift in Sources */,

@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var shapeButtons: [UIButton]!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -55,11 +54,11 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "mainToMeasure", sender: self)
         
     }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let vc = segue.destination as! MeasureViewController
             vc.tempText = passingInfo
     }
+    
     @IBAction func handleSelection(_ sender: UIButton) {
         shapeButtons.forEach{(button) in
             UIView.animate(withDuration: 0.3, animations: {

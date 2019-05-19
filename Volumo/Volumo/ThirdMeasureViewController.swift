@@ -1,18 +1,19 @@
 //
-//  SecondMeasureViewController.swift
+//  ThirdMeasureViewController.swift
 //  Volumo
 //
-//  Created by Ashwin Sajiv Purushothama Babu on 10/05/19.
+//  Created by Ashwin Sajiv Purushothama Babu on 18/05/19.
 //  Copyright © 2019 Ashwin Sajiv Purushothama Babu. All rights reserved.
 //
 
 import UIKit
 import ARKit
 
-class SecondMeasureViewController: UIViewController, ARSCNViewDelegate {
+class ThirdMeasureViewController: UIViewController, ARSCNViewDelegate {
     var tempText = ""
     var tempDistance1 = Float(0)
     var tempDistance2 = Float(0)
+    var tempDistance3 = Float(0)
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var distance: UILabel!
     var startingPosition: SCNNode?
@@ -24,13 +25,8 @@ class SecondMeasureViewController: UIViewController, ARSCNViewDelegate {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
         self.sceneView.delegate = self
-        if(tempText != "Cuboid"){
-            let alert = UIAlertController(title: "Alert", message: "Measure diameter", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else if (tempText == "Cuboid"){
-            let alert = UIAlertController(title: "Alert", message: "Measure length", preferredStyle: UIAlertController.Style.alert)
+        if(tempText == "Cuboid"){
+            let alert = UIAlertController(title: "Alert", message: "Measure width", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -53,26 +49,11 @@ class SecondMeasureViewController: UIViewController, ARSCNViewDelegate {
         self.startingPosition = sphere
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if !(tempText == "Cuboid"){
             let vc = segue.destination as! ResultsViewController
             vc.tempText = self.tempText
             vc.tempDistance1 = self.tempDistance1
             vc.tempDistance2 = self.tempDistance2
-        }
-        else {
-            let vc = segue.destination as! ThirdMeasureViewController
-            vc.tempText = self.tempText
-            vc.tempDistance1 = self.tempDistance1
-            vc.tempDistance2 = self.tempDistance2
-        }
-    }
-    @IBAction func measureNext(_ sender: UIButton) {
-        if !(tempText == "Cuboid"){
-            performSegue(withIdentifier: "measure2ToResults", sender: self)
-        }
-        else {
-            performSegue(withIdentifier: "measure2ToMeasure3", sender: self)
-        }
+            vc.tempDistance3 = self.tempDistance3
     }
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         guard let startingPosition = self.startingPosition else {return}
@@ -88,13 +69,16 @@ class SecondMeasureViewController: UIViewController, ARSCNViewDelegate {
         let zDistance = location.z - startingPosition.position.z
         DispatchQueue.main.async {
             self.distance.text = String(format: "%.2f", self.distanceTravelled(x: xDistance, y: yDistance, z: zDistance)) + "m"
-            self.tempDistance2 = Float(self.distanceTravelled(x: xDistance, y: yDistance, z: zDistance))
+            self.tempDistance3 = Float(self.distanceTravelled(x: xDistance, y: yDistance, z: zDistance))
         }
     }
     
     func distanceTravelled(x: Float, y: Float, z: Float) -> Float {
         return (sqrtf(x*x + y*y + z*z))
     }
+    @IBAction func measure3(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
