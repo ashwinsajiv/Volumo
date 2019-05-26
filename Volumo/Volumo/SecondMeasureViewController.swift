@@ -24,13 +24,13 @@ class SecondMeasureViewController: UIViewController, ARSCNViewDelegate {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
         self.sceneView.delegate = self
-        if(tempText != "Cuboid"){
-            let alert = UIAlertController(title: "Alert", message: "Measure diameter", preferredStyle: UIAlertController.Style.alert)
+        if (tempText == "Cuboid" || tempText == "Pyramid"){
+            let alert = UIAlertController(title: "Alert", message: "Measure length", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        else if (tempText == "Cuboid"){
-            let alert = UIAlertController(title: "Alert", message: "Measure length", preferredStyle: UIAlertController.Style.alert)
+        else {
+            let alert = UIAlertController(title: "Alert", message: "Measure diameter", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -53,7 +53,7 @@ class SecondMeasureViewController: UIViewController, ARSCNViewDelegate {
         self.startingPosition = sphere
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if !(tempText == "Cuboid"){
+        if !(tempText == "Cuboid" || tempText == "Pyramid"){
             let vc = segue.destination as! ResultsViewController
             vc.tempText = self.tempText
             vc.tempDistance1 = self.tempDistance1

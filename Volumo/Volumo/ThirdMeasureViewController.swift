@@ -25,7 +25,7 @@ class ThirdMeasureViewController: UIViewController, ARSCNViewDelegate {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
         self.sceneView.delegate = self
-        if(tempText == "Cuboid"){
+        if(tempText == "Cuboid" || tempText == "Pyramid" ){
             let alert = UIAlertController(title: "Alert", message: "Measure width", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)

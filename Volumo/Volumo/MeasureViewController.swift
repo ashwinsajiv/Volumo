@@ -29,7 +29,7 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        else if (tempText == "Cylinder" || tempText == "Cone" || tempText == "Cube" || tempText == "Cuboid"){
+        else if (tempText == "Cylinder" || tempText == "Cone" || tempText == "Cube" || tempText == "Cuboid" || tempText == "Pyramid"){
             let alert = UIAlertController(title: "Alert", message: "Measure height", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
