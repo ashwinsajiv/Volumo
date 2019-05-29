@@ -67,7 +67,7 @@ class SecondMeasureViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     @IBAction func measureNext(_ sender: UIButton) {
-        if !(tempText == "Cuboid"){
+        if !(tempText == "Cuboid" || tempText == "Pyramid"){
             performSegue(withIdentifier: "measure2ToResults", sender: self)
         }
         else {

@@ -26,7 +26,7 @@ class ResultsViewController: UIViewController, ARSCNViewDelegate {
         if (tempText == "Cylinder") {
             print(tempDistance1,tempDistance2/2,tempText)
             let result = 3.14 * (Float(tempDistance2/2) * Float(tempDistance2/2)) * (tempDistance1)
-            let outputString = "The volume is " + String(result) + " cubic meters and the object can hold " + String(result*1000) + "litres"
+            let outputString = "The volume is " + String(format: "%.5f",result) + " cubic meters and the object can hold " + String(result*1000) + "litres"
             resultLabel.text = outputString
             node.geometry = SCNCylinder(radius: CGFloat(tempDistance2/2), height: CGFloat(tempDistance1))
             node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
