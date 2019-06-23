@@ -1,7 +1,7 @@
 //
 //  ResultsViewController.swift
 //  Volumo
-//
+//  This view displays the volume and also the augmented projection of the object
 //  Created by Ashwin Sajiv Purushothama Babu on 20/04/19.
 //  Copyright © 2019 Ashwin Sajiv Purushothama Babu. All rights reserved.
 //
@@ -23,10 +23,11 @@ class ResultsViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView.session.run(configuration)
         self.sceneView.autoenablesDefaultLighting = true
         let node = SCNNode()
+        // Set of conditions to display the appropriate volume and projection
         if (tempText == "Cylinder") {
             print(tempDistance1,tempDistance2/2,tempText)
             let result = 3.14 * (Float(tempDistance2/2) * Float(tempDistance2/2)) * (tempDistance1)
-            let outputString = "The volume is " + String(format: "%.5f",result) + " cubic meters and the object can hold " + String(result*1000) + "litres"
+            let outputString = "The volume is " + String(format: "%.5f",result) + " cubic meters"
             resultLabel.text = outputString
             node.geometry = SCNCylinder(radius: CGFloat(tempDistance2/2), height: CGFloat(tempDistance1))
             node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
@@ -47,13 +48,13 @@ class ResultsViewController: UIViewController, ARSCNViewDelegate {
         }
         else if (tempText == "Hemisphere") {
             print(tempDistance1,tempText)
-            let result = 0.5 * 3.14 * (tempDistance1/2) * (tempDistance1/2)
+            let result = 0.5 * 1.3333 * 3.14 * (tempDistance1/2) * (tempDistance1/2) * (tempDistance1/2)
             let outputString = "The volume is " + String(format: "%.5f",result) + " cubic meters"
             resultLabel.text = outputString
         }
         else if (tempText == "Sphere") {
             print(tempDistance1,tempText)
-            let result = 3.14 * (tempDistance1/2) * (tempDistance1/2)
+            let result = 1.3333 * 3.14 * (tempDistance1/2) * (tempDistance1/2) * (tempDistance1/2)
             let outputString = "The volume is " + String(format: "%.5f",result) + " cubic meters"
             resultLabel.text = outputString
             node.geometry = SCNSphere(radius: CGFloat(tempDistance1/2))
@@ -107,20 +108,7 @@ class ResultsViewController: UIViewController, ARSCNViewDelegate {
             node.eulerAngles = SCNVector3(0,0,1.5708)
             self.sceneView.scene.rootNode.addChildNode(node)
         }
-        // Do any additional setup after loading the view.
     }
-    
     @IBAction func Home(_ sender: UIButton) {
     }
-  
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

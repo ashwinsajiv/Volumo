@@ -1,7 +1,8 @@
 //
 //  ThirdMeasureViewController.swift
 //  Volumo
-//
+//  Similar to the measure view
+//  With limited resources and knowledge, I had to create new views for different dimensions
 //  Created by Ashwin Sajiv Purushothama Babu on 18/05/19.
 //  Copyright © 2019 Ashwin Sajiv Purushothama Babu. All rights reserved.
 //
@@ -30,7 +31,6 @@ class ThirdMeasureViewController: UIViewController, ARSCNViewDelegate {
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        // Do any additional setup after loading the view.
     }
     @objc func handleTap(sender: UITapGestureRecognizer) {
         guard let sceneView = sender.view as? ARSCNView else {return}
@@ -72,21 +72,9 @@ class ThirdMeasureViewController: UIViewController, ARSCNViewDelegate {
             self.tempDistance3 = Float(self.distanceTravelled(x: xDistance, y: yDistance, z: zDistance))
         }
     }
-    
     func distanceTravelled(x: Float, y: Float, z: Float) -> Float {
         return (sqrtf(x*x + y*y + z*z))
     }
     @IBAction func measure3(_ sender: UIButton) {
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

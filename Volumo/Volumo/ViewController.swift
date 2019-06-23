@@ -1,7 +1,8 @@
 //
 //  ViewController.swift
 //  Volumo
-//
+//  This views purpose is to display the shapes and pass the information to
+//  the next view
 //  Created by Ashwin Sajiv Purushothama Babu on 17/04/19.
 //  Copyright © 2019 Ashwin Sajiv Purushothama Babu. All rights reserved.
 //
@@ -16,7 +17,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     var shape = ""
-    var passingInfo = ""
+    var passingInfo = "" // Passes the selected shape to the next view
+    // An enumerator to hold all the shapes
     enum Shapes: String {
         case cylinder = "Cylinder"
         case cone = "Cone"
@@ -58,7 +60,7 @@ class ViewController: UIViewController {
             let vc = segue.destination as! MeasureViewController
             vc.tempText = passingInfo
     }
-    
+    // The list of buttons are hidden and displayed when tapped
     @IBAction func handleSelection(_ sender: UIButton) {
         shapeButtons.forEach{(button) in
             UIView.animate(withDuration: 0.3, animations: {

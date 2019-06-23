@@ -1,7 +1,7 @@
 //
 //  MeasureViewController.swift
 //  Volumo
-//
+//  The measure view is used to measure the lengths of dimensions
 //  Created by Ashwin Sajiv Purushothama Babu on 19/04/19.
 //  Copyright © 2019 Ashwin Sajiv Purushothama Babu. All rights reserved.
 //
@@ -19,11 +19,14 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
     var i = 1
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Display the feature points and the world origin
         self.sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
         self.sceneView.session.run(configuration)
+        // When tapped start the measurement process
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
         self.sceneView.delegate = self
+        // A set of conditions to display appropriate alert messages
         if (tempText == "Length"){
             let alert = UIAlertController(title: "Alert", message: "Measure length", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
@@ -39,7 +42,6 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        // Do any additional setup after loading the view.
     }
     @objc func handleTap(sender: UITapGestureRecognizer) {
         guard let sceneView = sender.view as? ARSCNView else {return}
@@ -51,12 +53,14 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
         }
         let camera = currentFrame.camera
         let transform = camera.transform
+        // Display the users reference path
         let sphere = SCNNode(geometry: SCNSphere(radius: 0.005))
         sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
         sphere.simdTransform = transform
         self.sceneView.scene.rootNode.addChildNode(sphere)
         self.startingPosition = sphere
     }
+    // Depending on the shape selected, go to the appropriate view
     @IBAction func Measure(_ sender: UIButton) {
         if !(tempText == "Sphere" || tempText == "Cube" || tempText == "Hemisphere" || tempText == "Length"){
         performSegue(withIdentifier: "measureToMeasure", sender: self)
@@ -65,7 +69,6 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
             performSegue(withIdentifier: "measure1ToResults", sender: self)
         }
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "measureToMeasure"){
             let vc = segue.destination as! SecondMeasureViewController
@@ -79,6 +82,7 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
             vc.tempDistance1 = self.tempDistance1
         }
     }
+    // Measure the devices location and the starting location
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         guard let startingPosition = self.startingPosition else {return}
         guard let pointOfView = self.sceneView.pointOfView else {return}
@@ -88,6 +92,7 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         sphere.position = SCNVector3(location.x, location.y, location.z - 0.1)
         self.sceneView.scene.rootNode.addChildNode(sphere)
+        // Calculate the distance travelled with the live location and the starting location
         let xDistance = location.x - startingPosition.position.x
         let yDistance = location.y - startingPosition.position.y
         let zDistance = location.z - startingPosition.position.z
@@ -96,19 +101,7 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
             self.tempDistance1 = Float(self.distanceTravelled(x: xDistance, y: yDistance, z: zDistance))
         }
     }
-    
     func distanceTravelled(x: Float, y: Float, z: Float) -> Float {
         return (sqrtf(x*x + y*y + z*z))
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
